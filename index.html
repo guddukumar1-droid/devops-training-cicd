@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="DevOps Training practical demonstrating automated deployment with GitHub Actions, Amazon S3, and Amazon CloudFront.">
+  <title>DevOps Training | Deployment Successful</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header" id="home">
+    <div class="container nav-wrapper">
+      <a class="brand" href="#home" aria-label="DevOps home">
+        <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+        <span>DEV<span>OPS</span></span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav id="primary-navigation" class="primary-navigation" aria-label="Primary navigation">
+        <a class="active" href="#home">Home</a>
+        <a href="#deployment">Deployment</a>
+        <a href="#architecture">Architecture</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+      <div class="container hero-layout">
+        <div class="hero-content reveal">
+          <div class="status-pill">
+            <span class="status-dot" aria-hidden="true"></span>
+            Deployment Successful
+          </div>
+          <p class="eyebrow">Cloud deployment practical</p>
+          <h1 id="hero-title">DevOps <span>Training</span></h1>
+          <p class="hero-subtitle">Application deployed successfully!</p>
+          <p class="hero-description">This application demonstrates a complete CI/CD deployment pipeline using GitHub Actions, AWS S3 and Amazon CloudFront.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#deployment">
+              View Deployment
+              <span aria-hidden="true">→</span>
+            </a>
+            <a class="button button-secondary" href="#architecture">View Architecture</a>
+          </div>
+        </div>
+
+        <div class="terminal-card reveal" aria-label="Successful deployment summary">
+          <div class="terminal-header">
+            <div class="terminal-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+            <span>deployment.yml</span>
+            <span class="terminal-live">LIVE</span>
+          </div>
+          <div class="terminal-body">
+            <p><span class="prompt">$</span> git push origin main</p>
+            <p><span class="terminal-muted">→</span> Triggering GitHub Actions...</p>
+            <p><span class="terminal-check">✓</span> Build validation complete</p>
+            <p><span class="terminal-check">✓</span> Assets synced to Amazon S3</p>
+            <p><span class="terminal-check">✓</span> CloudFront cache invalidated</p>
+            <div class="terminal-result">
+              <span class="terminal-check">●</span>
+              <div>
+                <strong>Deployment successful</strong>
+                <small>Production environment is live</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-grid" aria-hidden="true"></div>
+    </section>
+
+    <section class="section pipeline-section" id="deployment" aria-labelledby="pipeline-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Automated delivery</p>
+          <h2 id="pipeline-title">Deployment Pipeline</h2>
+          <p>Every code change moves through a reliable, repeatable workflow from source control to global delivery.</p>
+        </div>
+
+        <ol class="pipeline" aria-label="Deployment stages">
+          <li class="pipeline-card reveal">
+            <span class="stage-number">01</span>
+            <div class="card-icon icon-github" aria-hidden="true">GH</div>
+            <h3>GitHub</h3>
+            <p>Source Code</p>
+          </li>
+          <li class="pipeline-card reveal">
+            <span class="stage-number">02</span>
+            <div class="card-icon icon-actions" aria-hidden="true">⚙</div>
+            <h3>GitHub Actions</h3>
+            <p>CI/CD Automation</p>
+          </li>
+          <li class="pipeline-card reveal">
+            <span class="stage-number">03</span>
+            <div class="card-icon icon-s3" aria-hidden="true">S3</div>
+            <h3>Amazon S3</h3>
+            <p>Static Hosting</p>
+          </li>
+          <li class="pipeline-card reveal">
+            <span class="stage-number">04</span>
+            <div class="card-icon icon-cloudfront" aria-hidden="true">◎</div>
+            <h3>Amazon CloudFront</h3>
+            <p>Global Content Delivery</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section architecture-section" id="architecture" aria-labelledby="architecture-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Infrastructure overview</p>
+          <h2 id="architecture-title">Cloud Architecture</h2>
+          <p>A simple, highly available static architecture with automated delivery and global content distribution.</p>
+        </div>
+
+        <div class="architecture-board reveal">
+          <div class="architecture-lane">
+            <div class="lane-heading">
+              <span class="lane-badge">Delivery path</span>
+              <p>How users access the application</p>
+            </div>
+            <div class="architecture-flow">
+              <div class="architecture-node">
+                <span class="node-icon" aria-hidden="true">♙</span>
+                <div><strong>User</strong><small>Browser request</small></div>
+              </div>
+              <span class="flow-arrow" aria-hidden="true">→</span>
+              <div class="architecture-node node-cloudfront">
+                <span class="node-icon" aria-hidden="true">◎</span>
+                <div><strong>CloudFront</strong><small>Global CDN</small></div>
+              </div>
+              <span class="flow-arrow" aria-hidden="true">→</span>
+              <div class="architecture-node node-s3">
+                <span class="node-icon" aria-hidden="true">S3</span>
+                <div><strong>Amazon S3</strong><small>Origin storage</small></div>
+              </div>
+              <span class="flow-arrow" aria-hidden="true">→</span>
+              <div class="architecture-node node-website">
+                <span class="node-icon" aria-hidden="true">&lt;/&gt;</span>
+                <div><strong>Website</strong><small>Static assets</small></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="architecture-divider" aria-hidden="true"></div>
+
+          <div class="architecture-lane">
+            <div class="lane-heading">
+              <span class="lane-badge lane-badge-purple">Deployment path</span>
+              <p>How changes reach production</p>
+            </div>
+            <div class="architecture-flow">
+              <div class="architecture-node">
+                <span class="node-icon" aria-hidden="true">⌨</span>
+                <div><strong>Developer</strong><small>Pushes code</small></div>
+              </div>
+              <span class="flow-arrow" aria-hidden="true">→</span>
+              <div class="architecture-node">
+                <span class="node-icon" aria-hidden="true">GH</span>
+                <div><strong>GitHub</strong><small>Source control</small></div>
+              </div>
+              <span class="flow-arrow" aria-hidden="true">→</span>
+              <div class="architecture-node node-actions">
+                <span class="node-icon" aria-hidden="true">⚙</span>
+                <div><strong>GitHub Actions</strong><small>Automated workflow</small></div>
+              </div>
+              <span class="flow-arrow" aria-hidden="true">→</span>
+              <div class="architecture-node node-s3">
+                <span class="node-icon" aria-hidden="true">S3</span>
+                <div><strong>Amazon S3</strong><small>Deploys files</small></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section technology-section" aria-labelledby="technology-title">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Tools &amp; services</p>
+          <h2 id="technology-title">Technology Stack</h2>
+          <p>Purpose-built tools working together to deliver a fast, secure and maintainable static application.</p>
+        </div>
+
+        <div class="technology-grid">
+          <article class="technology-card reveal">
+            <div class="tech-icon">GH</div>
+            <h3>GitHub</h3>
+            <p>Version control and the central source of truth for application code.</p>
+          </article>
+          <article class="technology-card reveal">
+            <div class="tech-icon tech-blue">⚙</div>
+            <h3>GitHub Actions</h3>
+            <p>Automates validation and deployment whenever new code is pushed.</p>
+          </article>
+          <article class="technology-card reveal">
+            <div class="tech-icon tech-orange">S3</div>
+            <h3>AWS S3</h3>
+            <p>Durable object storage that hosts the static website files.</p>
+          </article>
+          <article class="technology-card reveal">
+            <div class="tech-icon tech-purple">◎</div>
+            <h3>AWS CloudFront</h3>
+            <p>Content delivery network that serves the website globally with low latency.</p>
+          </article>
+          <article class="technology-card reveal">
+            <div class="tech-icon tech-html">&lt;5&gt;</div>
+            <h3>HTML5</h3>
+            <p>Semantic, accessible structure for the application's content.</p>
+          </article>
+          <article class="technology-card reveal">
+            <div class="tech-icon tech-css">#3</div>
+            <h3>CSS3</h3>
+            <p>Responsive layouts, visual design and subtle interface animations.</p>
+          </article>
+          <article class="technology-card reveal">
+            <div class="tech-icon tech-js">JS</div>
+            <h3>JavaScript</h3>
+            <p>Lightweight enhancements for navigation and interactive behavior.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section status-section" aria-labelledby="status-title">
+      <div class="container">
+        <div class="status-panel reveal">
+          <div class="status-summary">
+            <p class="eyebrow">Production environment</p>
+            <h2 id="status-title">Deployment Status</h2>
+            <div class="success-emblem" aria-hidden="true">✓</div>
+            <div class="success-label">
+              <span>Status</span>
+              <strong>SUCCESS</strong>
+            </div>
+            <p>All systems are operational and the latest application version is available globally.</p>
+            <div class="live-indicator"><span></span> Production is live</div>
+          </div>
+
+          <dl class="status-details">
+            <div><dt>Environment</dt><dd>AWS Cloud</dd></div>
+            <div><dt>Storage</dt><dd>Amazon S3</dd></div>
+            <div><dt>CDN</dt><dd>Amazon CloudFront</dd></div>
+            <div><dt>CI/CD</dt><dd>GitHub Actions</dd></div>
+            <div><dt>Application</dt><dd>DevOps Training</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section version-section" id="about" aria-labelledby="version-title">
+      <div class="container">
+        <div class="version-card reveal">
+          <div>
+            <p class="eyebrow">Release information</p>
+            <h2 id="version-title">Application Version</h2>
+            <p>Version changes are delivered automatically through the CI/CD pipeline.</p>
+          </div>
+          <dl class="version-details">
+            <!-- Update this value to demonstrate a new automated deployment. -->
+            <div><dt>Version</dt><dd>1.0</dd></div>
+            <div><dt>Deployment</dt><dd><span class="automation-dot"></span>Automated</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div>
+        <a class="brand footer-brand" href="#home">
+          <span class="brand-mark" aria-hidden="true">&lt;/&gt;</span>
+          <span>DEV<span>OPS</span></span>
+        </a>
+        <p>DevOps Training Practical</p>
+      </div>
+      <div class="footer-copy">
+        <p>Built with HTML, CSS &amp; JavaScript</p>
+        <p>Deployed using GitHub Actions + AWS S3 + CloudFront</p>
+        <p>&copy; <span id="current-year"></span> DevOps Training</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
