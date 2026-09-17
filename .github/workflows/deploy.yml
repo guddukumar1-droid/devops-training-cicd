@@ -18,10 +18,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v5
 
-      - name: Debug OIDC token
-        uses: github/actions-oidc-debugger@main
-        continue-on-error: true
-
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v6
         with:
